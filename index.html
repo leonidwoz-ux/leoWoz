@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Цветовой Фокус</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero" aria-labelledby="game-title">
+        <div class="title-block">
+          <p class="eyebrow">игра на внимание</p>
+          <h1 id="game-title">Цветовой Фокус</h1>
+          <p class="subtitle">Найди плитку, цвет которой едва отличается от остальных.</p>
+        </div>
+
+        <div class="score-panel" aria-label="Статистика игры">
+          <div>
+            <span>Уровень</span>
+            <strong id="level">1</strong>
+          </div>
+          <div>
+            <span>Сетка</span>
+            <strong id="grid-size">2 x 2</strong>
+          </div>
+          <div>
+            <span>Очки</span>
+            <strong id="score">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="play-area" aria-label="Игровое поле">
+        <div class="status-row">
+          <div>
+            <p id="round-label">Найди отличающийся цвет</p>
+            <small id="difficulty-label">Цвета пока заметно разные</small>
+          </div>
+          <button id="restart" class="icon-button" type="button" aria-label="Начать заново" title="Начать заново">
+            ↻
+          </button>
+        </div>
+
+        <div id="board" class="board" role="grid" aria-label="Найди отличающуюся цветную плитку"></div>
+
+        <div class="feedback" aria-live="polite">
+          <span id="message">Выбери плитку, которая отличается по цвету.</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
